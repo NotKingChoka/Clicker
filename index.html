@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кликер Ларисы</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="game-area" aria-label="Игровая зона">
+      <header class="hud-card" aria-live="polite">
+        <span class="coin-icon" aria-hidden="true">🪙</span>
+        <span class="hud-label">Монеты:</span>
+        <strong id="coins">0</strong>
+      </header>
+
+      <button id="clickTarget" class="click-target" type="button" aria-label="Клик по фото">
+        <img id="targetPhoto" src="assets/target-photo.png" alt="Фото для клика" loading="lazy" />
+      </button>
+
+      <section class="stats-card" aria-label="Текущая статистика">
+        <p>Монет за клик: <strong id="coinsPerClick">1</strong></p>
+        <p>Автокликеры: <strong id="autoClickers">0</strong></p>
+      </section>
+    </section>
+
+    <aside class="shop-card" aria-label="Магазин улучшений">
+      <h2>МАГАЗИН</h2>
+
+      <article class="upgrade-card">
+        <h3>⚡ Сила клика</h3>
+        <p class="upgrade-note">+1 монета за клик</p>
+        <p class="upgrade-owned">Куплено: <strong id="clickLevel">0</strong></p>
+        <div class="upgrade-footer">
+          <p class="price">Цена: <strong id="clickPrice">50</strong></p>
+          <button id="buyClickPower" class="buy-btn" type="button">Купить</button>
+        </div>
+      </article>
+
+      <article class="upgrade-card">
+        <h3>🔒 Автокликер</h3>
+        <p class="upgrade-note">+1 монета в секунду</p>
+        <p class="upgrade-owned">Куплено: <strong id="autoLevel">0</strong></p>
+        <div class="upgrade-footer">
+          <p class="price">Цена: <strong id="autoPrice">120</strong></p>
+          <button id="buyAutoClicker" class="buy-btn" type="button">Купить</button>
+        </div>
+      </article>
+
+      <button id="resetProgress" class="reset-btn" type="button">Сбросить прогресс</button>
+      <p class="photo-tip">Если нужно поменять фото: замените файл <code>assets/target-photo.png</code>.</p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
